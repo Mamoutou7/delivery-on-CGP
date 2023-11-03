@@ -8,4 +8,4 @@ Date: 03/11/2023
 ## 1 - Fork the repository
 ## 2 - Setup trigger in Cloud Build to automate
 ## 3 - Make sure these settings are enabled
-![](screenshots/example.png)
+![](screenshot/cloud-build.png)
