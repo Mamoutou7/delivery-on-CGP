@@ -8,6 +8,10 @@ from flask import jsonify
 
 app = Flask(__name__)
 
+
+
+employees = [ { 'id': 1, 'name': 'Ashley' }, { 'id': 2, 'name': 'Kate' }, { 'id': 3, 'name': 'Joe' }]
+
 @app.route('/')
 def hello_world():
     """Return a friendly HTTP greeting."""
@@ -18,11 +22,9 @@ def name(value):
     val = {"value": value}
     return jsonify(val)
 
-@app.route('/dupond')
-def dupond():
-    val = {"value": "dupond"}
-    return jsonify(val)
-
+@app.route('/employees', methods=['GET'])
+def get_employees():
+    return jsonify(employees)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
